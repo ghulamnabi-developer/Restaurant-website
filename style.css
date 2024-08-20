@@ -1,0 +1,752 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap');
+
+/* Loader Container */
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Loader */
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Animation for Loader */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+/* nav bar style  */
+#navbarNav ul li a{
+    color: black;
+    font-size: 15 px;
+    font-weight: bold;
+}
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    margin: 0 10px;
+    position: relative;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #007bff;
+    transition: width 0.3s;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.form-control {
+    width: 200px;
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        justify-content: flex-start;
+    }
+    .form-control {
+        width: 100%;
+    }
+    .navbar-nav {
+        margin-top: 10px;
+    }
+}
+
+/* Hero Section Styles */
+.hero-section {
+    background-image: url('images/hero.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(94, 77, 77, 0.5); /* Dark overlay for readability */
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-heading {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color:rgb(239, 247, 6); /* Custom color for the heading */
+    text-transform: uppercase;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    color: #f8f9fa; /* Light gray for the paragraph */
+}
+
+.hero-btn {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: #007bff;
+    border: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .hero-heading {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-btn {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+}
+/* About Us Section Styles */
+.about-us-section {
+    background-color: #f8f9fa; /* Light gray background to separate this section */
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    padding: 50px 0; /* Additional padding to make the section spacious */
+}
+
+.about-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffcc00; /* Gold color for the heading */
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.about-paragraph {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.about-btn {
+    padding: 10px 25px;
+    font-size: 1rem;
+    background-color: #007bff;
+    border: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.about-btn:hover {
+    background-color: #0056b3;
+}
+
+.about-image {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    max-height: 350px; /* Set a maximum height for the image */
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+}
+
+@media (max-width: 768px) {
+    .about-heading {
+        font-size: 2rem;
+    }
+
+    .about-paragraph {
+        font-size: 1rem;
+    }
+
+    .about-image {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+}
+/* Our Services Section Styles */
+.our-services-section {
+    background-color: #d5d0d0; /* Light gray background for the section */
+    padding: 50px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.section-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.service-box {
+    background-color: #fff; /* White background for service boxes */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%; /* Ensure all boxes are the same height */
+    text-align: center;
+}
+
+.service-icon {
+    width: 80px; /* Fixed size for icons */
+    height: 80px;
+    object-fit: cover; /* Ensure the image fits well */
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.service-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.service-description {
+    font-size: 1rem;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .service-box {
+        padding: 15px;
+    }
+
+    .service-title {
+        font-size: 1.1rem;
+    }
+
+    .service-description {
+        font-size: 0.9rem;
+    }
+}
+
+/* Best Deals Section Styles */
+.best-deals-section {
+    background-color: #fff3e0; /* Light orange background for the section */
+    font-family: 'Poppins', sans-serif;
+    padding: 50px 0;
+}
+
+.section-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.deal-card {
+    background-color: #ffffff; /* White background for the deal cards */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.deal-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.deal-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.deal-content {
+    padding: 20px;
+}
+
+.deal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e67e22; /* Orange color for the deal title */
+    margin-bottom: 15px;
+}
+
+.deal-description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.deal-price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #d35400; /* Darker orange for the price */
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    .deal-title {
+        font-size: 1.25rem;
+    }
+
+    .deal-description {
+        font-size: 0.9rem;
+    }
+
+    .deal-price {
+        font-size: 1.1rem;
+    }
+}
+
+/* Customer Review Section Styles */
+.customer-review-section {
+    background-color: #f9f9f9; /* Light gray background for the section */
+    font-family: 'Poppins', sans-serif;
+    padding: 50px 0;
+}
+
+.section-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.carousel-inner {
+    display: flex;
+}
+
+.carousel-item {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.review-card {
+    background-color: #ffffff; /* White background for review cards */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review-img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.review-text {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.reviewer-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    filter: invert(100%);
+}
+
+@media (max-width: 768px) {
+    .review-card {
+        padding: 15px;
+    }
+
+    .review-text {
+        font-size: 0.9rem;
+    }
+
+    .reviewer-name {
+        font-size: 1rem;
+    }
+}
+
+/* Footer Section Styles */
+.footer-section {
+    background-color: #333; /* Dark background for the footer */
+    color: #fff; /* White text color */
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    margin-bottom: 10px;
+}
+
+.social-media-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #e67e22; /* Orange color on hover */
+}
+
+@media (max-width: 768px) {
+    .social-icon {
+        font-size: 1.25rem;
+    }
+}
+
+/* opening hour pages style */
+
+/* Opening Hours Section Styles */
+.opening-hours-section {
+    background-color: #fff; /* White background for the section */
+    padding: 50px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.section-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.opening-hours-box {
+    background-color: #f8f9fa; /* Light background for each box */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.day-heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.hours {
+    font-size: 1.25rem;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .opening-hours-box {
+        padding: 15px;
+    }
+
+    .day-heading {
+        font-size: 1.25rem;
+    }
+
+    .hours {
+        font-size: 1rem;
+    }
+}
+
+/* about us page */
+
+/* General Page Styles */
+/* body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+} */
+
+/* Hero Section Styles */
+.hero-section-about {
+    background-image: url('images/about1.jpg'); /* Replace with your background image */
+    /* background-size: cover; */
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    height: 200px; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+   
+}
+
+.hero-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    color: yellow;
+}
+
+/* About Us Section Styles */
+.about-us-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.about-us-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-us-section p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.about-us-section img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Location Section Styles */
+.location-section {
+    padding: 60px 0;
+    background-color: #ececec;
+}
+
+.location-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.map-container {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Meet Our Staff Section Styles */
+.meet-our-staff-section {
+    padding: 60px 0;
+    background-color: #f1f1f1;
+}
+
+.meet-our-staff-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.staff-box {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.staff-box:hover {
+    transform: translateY(-10px);
+}
+
+.staff-box img {
+    border-radius: 50%;
+    margin-bottom: 15px;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.staff-box h4 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.staff-box p {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* contact us pages style */
+
+/* Hero Section Styles */
+.hero-section-contact {
+    background-image: url('images/contact.jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    height: 200px; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.hero-heading {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+
+/* Contact Us Section Styles */
+.contact-us-section {
+    background-color: #f8f9fa;
+}
+
+.contact-us-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.contact-us-section .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-us-section .form-control {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: none;
+    border-color: #ccc;
+    padding: 10px 15px;
+}
+
+.contact-us-section .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: 5px;
+    padding: 10px 30px;
+    width: 100%;
+}
+
+.contact-us-section .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004080;
+}
+
+/* Modal customization */
+.modal-header {
+    background-color: #343a40;
+    color: white;
+}
+
+.modal-content {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.btn-close {
+    background-color: white;
+}
+
+.modal-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.form-control, .form-select {
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: #343a40;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #495057;
+}
+
+.btn-primary:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Modal Form Styling */
+#orderForm .form-control,
+#orderForm .form-select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#orderForm .form-label {
+    font-weight: bold;
+    color: #333;
+}
+
+#orderForm button[type="submit"] {
+    background-color: #28a745;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#orderForm button[type="submit"]:hover {
+    background-color: #218838;
+}
