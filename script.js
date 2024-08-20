@@ -1,11 +1,11 @@
 // loader 
-document.addEventListener('DOMContentLoaded', function () {
-    // Hide the loader after the page has fully loaded
-    window.addEventListener('load', function () {
-        const loader = document.getElementById('loader');
-        loader.style.display = 'none';
-    });
-});
+// document.addEventListener('DOMContentLoaded', function () {
+//     // Hide the loader after the page has fully loaded
+//     window.addEventListener('load', function () {
+//         const loader = document.getElementById('loader');
+//         loader.style.display = 'none';
+//     });
+// });
 
 // Initialize EmailJS with your User ID
 function contactFormSendData() {
